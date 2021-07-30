@@ -2,22 +2,22 @@ import "./register.css";
 
 export default function Register() {
   return (
-    <div className="login">
-      <div className="loginWrapper">
-        <div className="loginLeft">
-          <h3 className="loginLogo">Under The Water</h3>
-          <span className="loginDesc">
+    <div className="register">
+      <div className="registerWrapper">
+        <div className="registerLeft">
+          <h3 className="registerLogo">Under The Water</h3>
+          <span className="registerDesc">
             Connect with friends and the world around you.
           </span>
         </div>
-        <div className="loginRight">
-          <div className="loginBox">
-            <input placeholder="Username" className="loginInput" />
-            <input placeholder="Email" className="loginInput" />
-            <input placeholder="Password" className="loginInput" />
-            <input placeholder="Password Again" className="loginInput" />
-            <button className="loginButton">Sign Up</button>
-            <button className="loginRegisterButton">
+        <div className="registerRight">
+          <div className="registerBox">
+            <input placeholder="Username" className="registerInput" />
+            <input placeholder="Email" className="registerInput" />
+            <input placeholder="Password" className="registerInput" />
+            <input placeholder="Password Again" className="registerInput" />
+            <button className="registerButton">Sign Up</button>
+            <button className="registerLoginButton">
               Log into Account
             </button>
           </div>
