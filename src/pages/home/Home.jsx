@@ -10,9 +10,15 @@ export default function Home() {
     <>
       <Topbar />
       <div className="homeContainer">
-        <Sidebar />
-        <Feed />
-        <Rightbar />
+        <div className="sidebarContainer">
+          <Sidebar />
+        </div>
+        <div className="feedContainer">
+          <Feed />
+        </div>
+        <div className="rightbarContainer">
+          <Rightbar />
+        </div>
       </div>
     </>
   )

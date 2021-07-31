@@ -1,5 +1,6 @@
 .profile{
   display: flex;
+  flex-direction: column;
 }
 
 .profileRight{
@@ -47,4 +48,31 @@
 
 .profileRightBottom{
   display: flex;
+}
+
+
+.sidebarContainerProfile {
+  display: none;
+}
+
+.rightbarContainerProfile {
+  display: none;
+}
+
+/* wider than 800px */
+@media screen and (min-width: 800px) {
+  .profile {
+    flex-direction: row;
+  }
+
+  .rightbarContainerProfile {
+    display: block;
+  }
+}
+
+/* wider than 1100px */
+@media screen and (min-width: 1100px) {
+  .sidebarContainerProfile {
+    display: block;
+  }
 }
