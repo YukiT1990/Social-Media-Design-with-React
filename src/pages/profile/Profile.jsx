@@ -18,7 +18,7 @@ export default function Profile() {
       setUser(res.data);
     }
     fetchUser();
-  }, []);
+  }, [username]);
 
   return (
     <>
@@ -30,8 +30,16 @@ export default function Profile() {
         <div className="profileRight">
           <div className="profileRightTop">
             <div className="profileCover">
-              <img className="profileCoverImg" src={user.coverPicture ? PF + user.coverPicture : PF + "fish/noCover.jpg"} alt="" />
-              <img className="profileUserImg" src={user.profilePicture ? PF + user.profilePicture : PF + "fish/noAvatar.jpg"} alt="" />
+              <img
+                className="profileCoverImg"
+                src={user.coverPicture ? PF + user.coverPicture : PF + "fish/noCover.jpg"}
+                alt=""
+              />
+              <img
+                className="profileUserImg"
+                src={user.profilePicture ? PF + user.profilePicture : PF + "fish/noAvatar.jpg"}
+                alt=""
+              />
             </div>
             <div className="profileInfo">
               <h4 className="profileInfoName">{user.username}</h4>
@@ -47,7 +55,6 @@ export default function Profile() {
             </div>
           </div>
         </div>
-
       </div>
     </>
   )

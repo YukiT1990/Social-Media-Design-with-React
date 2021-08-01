@@ -18,19 +18,24 @@ export default function Share() {
     };
     if (file) {
       const data = new FormData();
-      const fileName = Date.now() + file.name;
+      // const fileName = Date.now() + file.name;
+      const fileName = file.name;
       data.append("name", fileName);
       data.append("file", file);
       newPost.img = fileName;
       console.log(newPost);
       try {
         await axios.post("/upload", data);
-      } catch (err) { }
+      } catch (err) {
+        console.log(err);
+      }
     }
     try {
       await axios.post("/posts", newPost);
       window.location.reload();
-    } catch (err) { }
+    } catch (err) {
+      console.log(err);
+    }
   };
 
   return (
@@ -42,7 +47,7 @@ export default function Share() {
             src={
               user.profilePicture
                 ? PF + user.profilePicture
-                : PF + "person/noAvatar.png"
+                : PF + "fish/noAvatar.jpg"
             }
             alt=""
           />
